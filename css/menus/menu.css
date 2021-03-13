@@ -1,0 +1,12 @@
+@import "../menus/menu_computer.css";
+@import "../menus/menu_mobile.css";
+@import "../menus/menu_tablet.css";
+@import "../menus/1.header/computer.css";
+@import "../menus/1.header/mobile.css";
+@import "../menus/1.header/tablet.css";
+@import "../menus/2.main/computer.css";
+@import "../menus/2.main/mobile.css";
+@import "../menus/2.main/tablet.css";
+@import "../menus/3.footer/computer.css";
+@import "../menus/3.footer/mobile.css";
+@import "../menus/3.footer/tablet.css";
