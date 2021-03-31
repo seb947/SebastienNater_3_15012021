@@ -1,0 +1,90 @@
+@media screen and (max-width: 767px){
+    .header
+    {
+        position: relative;
+        &__link{
+            position: absolute;
+            left: 20px;
+            top: 22px;
+        }
+    }
+    .menu{
+        &__heading{
+            width: 100%;
+            &__imagecontainer{
+                position: relative;
+                &__image{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+                &__titlecontainer{
+                    display: flex;
+                    position: absolute;
+                    justify-content: space-between;
+                    background-color: #f6f6f6;
+                    border-radius: 1.5rem 1.5rem 0 0;
+                    width: 100%;
+                    bottom: -20px;
+                    &__title{
+                        font-family: 'Shrikhand', cursive;
+                        margin-left: 15px;
+                    }
+                    &__heart{
+                        align-self: center;
+                    }
+                }
+            }
+        }
+        &__content{
+            padding: 5px 0 50px 0;
+            background-color: #f6f6f6;
+            &__part{
+                margin-top: 25px;
+                padding: 0 15px;
+                &__title{
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin: 0;
+                }
+                &__line{ 
+                    border-bottom: 3px #99e2d0 solid;
+                    width: 50px;
+                }
+                &__dishescontainer{
+                    &__dishes{
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        background-color: white;
+                        border-radius: 1rem;
+                        margin-top: 15px;
+                        padding: 10px 0 0 10px;
+                        @include link-shadow;
+                        height: 50px;
+                        &__name{
+                            font-weight: 600;
+                        }
+                        &__price{
+                            position: absolute;
+                            right: 15px;
+                            bottom: 10px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            &__linkcontainer{
+                margin: 60px 0 40px 0;
+                text-align: center;
+                &__order{
+                    background-image: linear-gradient($color_secondary, $color_primary);
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 1.4rem;
+                    @include link-shadow;
+                }
+            }
+        }
+    }
+}

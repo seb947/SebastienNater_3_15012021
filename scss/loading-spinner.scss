@@ -1,0 +1,23 @@
+.loadingspinner{
+    visibility: hidden;
+    animation: loading-page 3s linear;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color_primary;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    &__icon{
+        position:relative;
+        border: 16px solid $color_secondary;
+        border-top: 16px solid $color_primary; 
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: loading-spinner 3s linear;
+        position: absolute;
+        z-index: 1001;
+        align-self: center;
+    }
+}

@@ -1,0 +1,26 @@
+@media screen and (max-width: 767px)
+{
+    .footer{
+        padding: 5px 0 20px 20px;
+        background-color: #353535;
+        color: #ffffff;
+        &__title{
+            font-family: 'Shrikhand', cursive;
+            font-size: 16.5px;
+        }
+        &__linkcontainer{
+            &__linkline{
+                margin: 0 0 5px 0;    
+                &__link{
+                    color: white;
+                }
+            }
+        }
+    }
+    .fa-hands-helping{
+        font-size: 12px;
+    }
+    .fa-utensils, .fa-hands-helping{
+        width: 20px;
+    }
+}
