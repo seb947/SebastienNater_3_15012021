@@ -50,26 +50,57 @@
                 &__line{ 
                     border-bottom: 3px #99e2d0 solid;
                     width: 50px;
+                    margin-bottom: 15px;
                 }
                 &__dishescontainer{
+                    display: flex;
+                    flex-direction: column;
                     &__dishes{
                         display: flex;
-                        flex-direction: column;
-                        position: relative;
                         background-color: white;
                         border-radius: 1rem;
-                        margin-top: 15px;
-                        padding: 10px 0 0 10px;
                         @include link-shadow;
-                        height: 50px;
-                        &__name{
-                            font-weight: 600;
+                        height: 60px;
+                        margin-bottom: 15px;
+                        overflow: hidden;
+                        &__info{
+                            padding: 10px;
+                            flex-grow: 1;
+                            overflow: hidden;
+                            &__name{
+                                font-weight: 600;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            &__description{
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
                         }
                         &__price{
-                            position: absolute;
-                            right: 15px;
-                            bottom: 10px;
-                            font-weight: 600;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            padding: 10px;
+                            &__nb{
+                                font-weight: 600;
+                            }
+                        }
+                        &__animation{
+                            display: flex;
+                            justify-content: space-around;
+                            width: 0px;
+                            height: 100%;
+                            transition: width 0.8s;
+                            &__check{
+                                font-size: 22px;
+                                color: white;
+                                opacity: 0;
+                                transition: opacity 0.8s ease;
+                                align-self: center;
+                              }
                         }
                     }
                 }
@@ -87,4 +118,12 @@
             }
         }
     }
+    .menu__content__part__dishescontainer__dishes:hover .animation{
+        background-color:$color_tertiary;
+        width: 70px;
+    }
+    .menu__content__part__dishescontainer__dishes:hover .fa-check-circle{
+        opacity: 1;
+        animation: spin 0.5s;
+      }
 }
