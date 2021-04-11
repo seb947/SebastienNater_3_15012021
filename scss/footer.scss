@@ -55,3 +55,33 @@
         width: 20px;
     }
 }
+
+@media screen and (min-width: 768px)
+{
+    .footer{
+        padding: 15px 5% 80px 5%;
+        background-color: #353535;
+        color: #ffffffc9;
+        &__title{
+            margin: 16px 0 40px 0;
+            width: 20%;
+            filter: brightness(0) invert(1);
+        }
+        &__linkcontainer{
+            display: flex;
+            justify-content: space-between;
+            &__linkline{
+                margin: 0 0 5px 0;   
+                &__link{
+                    color: white;
+                }
+            }
+        }
+    }
+    .fa-hands-helping{
+        font-size: 12px;
+    }
+    .fa-utensils, .fa-hands-helping{
+        width: 20px;
+    }
+}
