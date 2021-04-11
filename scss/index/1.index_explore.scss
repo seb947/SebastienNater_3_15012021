@@ -27,6 +27,7 @@
         &__content__title
         {
             width: 250px;
+            max-width: 100%;
             margin: 0 auto;
             padding-top: 40px;
             text-align: center;
@@ -36,6 +37,7 @@
         &__content__complement
         {
             width: 320px;
+            max-width: 100%;
             margin: 0 auto;
             text-align: center;
             font-size: 18px;
@@ -51,6 +53,80 @@
                 padding: 12px 20px;
                 border-radius: 1.4rem;
                 @include link-shadow;
+                &:hover{
+                    filter: brightness(125%);
+                    @include link-shadow-hover;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .explore
+    {
+        border-radius: 3rem;
+        background-color: #f6f6f6;
+        padding-bottom: 70px;
+        margin-bottom: 60px;
+        overflow: hidden;
+        border: 4px #d5d5d5 solid;
+        &__header
+        {
+            border-radius: 2.7rem 2.7rem 0 0;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            &__position
+            {
+                position: relative;
+                font-size: 16.5px;
+                font-weight: 500;
+                &__gpsicon
+                {
+                    position: absolute;
+                    left: -31px;
+                }
+            }
+        }
+        &__content__title
+        {
+            width: 60%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding-top: 40px;
+            text-align: center;
+            font-size: 25.5px;
+            font-weight: 900;
+        }
+        &__content__complement
+        {
+            width: 30%;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px 0 40px 0;
+        }
+        &__content__linkcontainer
+        {
+            margin: 20px 0 10px 0;
+            text-align: center;
+            &__link
+            {
+                background-image: linear-gradient($color_secondary, $color_primary);
+                color: white;
+                padding: 15px 30px;
+                border-radius: 2rem;
+                @include link-shadow;
+                font-size: 26.5px;
+                &:hover{
+                    filter: brightness(125%);
+                    @include link-shadow-hover;
+                }
             }
         }
     }

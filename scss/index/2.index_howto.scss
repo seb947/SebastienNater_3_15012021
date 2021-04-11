@@ -9,7 +9,6 @@
             &__info{
                 display: flex;
                 align-items: center;
-                width: 320px;
                 border-radius: 1rem;
                 height: 65px;
                 margin: 0 20px 20px 35px;
@@ -39,17 +38,70 @@
                     font-weight: 600;
                     line-height: 25px;
                 }
+                &:hover
+                {
+                    background-color: #f5edff;
+                }
             }
         }
     }
+    .fa-store
+    {
+        color: $color_primary;
+    }
 }
-
-.fa-store
-{
-    color: $color_primary;
-}
-
-.info3
-{
-    background-color: #f5edff;
+@media screen and (min-width: 1200px){
+    .howto{
+        padding: 40px 0 60px 0;    
+        &__title{
+            margin: 0 0 40px 15px;
+            
+        }
+        &__infocontainer
+        {
+            display: flex;
+            justify-content: space-between;
+            &__info{
+                width: 25%;
+                display: flex;
+                align-items: center;
+                border-radius: 1rem;
+                height: 65px;
+                margin: 0 20px 20px 35px;
+                @include link-shadow;
+                background-color: #f6f6f6;
+                &__number{
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    border-radius: 1.5rem;
+                    background-color: $color_primary;
+                    text-align: center;
+                    color: white;
+                    position: relative;
+                    left: -13px;
+                }
+                &__icon{
+                    width: 20px;
+                    height: 20px;
+                    font-size: 20px;
+                    margin-left: 35px;
+                    text-align: center;
+                }
+                &__text{
+                    margin: 0 30px 0 30px;
+                    font-weight: 600;
+                    line-height: 25px;
+                }
+                &:hover
+                {
+                    background-color: #f5edff;
+                }
+            }
+        }
+    }
+    .fa-store
+    {
+        color: $color_primary;
+    }
 }

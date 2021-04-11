@@ -2,10 +2,30 @@
     header{
         display: flex;
         justify-content: center;
+    }
+    .header__logo{
+        width: 170px;
+        padding: 18px 0 12px 0;
+    }
+}
 
-        .header__logo{
-            width: 170px;
-            padding: 18px 0 12px 0;
+@media screen and (min-width: 1200px){
+    .header
+    {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        height: 65px;
+        &__link{
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            &__arrow{
+                font-size: 25px;
+            }
+        }
+        &__logo{
+            margin: 15px;
         }
     }
 }

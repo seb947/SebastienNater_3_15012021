@@ -3,14 +3,45 @@
     .footer{
         padding: 5px 0 20px 20px;
         background-color: #353535;
-        color: #ffffff;
+        color: #ffffffc9;
         &__title{
-            font-family: 'Shrikhand', cursive;
-            font-size: 16.5px;
+            margin: 16px 0 16px 0;
+            width: 25%;
+            filter: brightness(0) invert(1);
         }
         &__linkcontainer{
             &__linkline{
                 margin: 0 0 5px 0;    
+                &__link{
+                    color: white;
+                }
+            }
+        }
+    }
+    .fa-hands-helping{
+        font-size: 12px;
+    }
+    .fa-utensils, .fa-hands-helping{
+        width: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .footer{
+        padding: 15px 10% 80px 10%;
+        background-color: #353535;
+        color: #ffffffc9;
+        &__title{
+            margin: 16px 0 40px 0;
+            width: 8%;
+            filter: brightness(0) invert(1);
+        }
+        &__linkcontainer{
+            display: flex;
+            justify-content: space-between;
+            &__linkline{
+                margin: 0 0 5px 0;   
                 &__link{
                     color: white;
                 }

@@ -13,6 +13,7 @@
             width: 100%;
             &__imagecontainer{
                 position: relative;
+                height: 275px;
                 &__image{
                     object-fit: cover;
                     height: 100%;
@@ -30,8 +31,31 @@
                         font-family: 'Shrikhand', cursive;
                         margin-left: 15px;
                     }
-                    &__heart{
+                    &__icons{
                         align-self: center;
+                        width: 25px; 
+                        height: 25px;
+                        margin-right: 35px;
+                        &__heart{
+                            position: absolute;
+                            align-self: center;
+                            font-size: 25px;
+                            display: block;
+                            background-color: #f6f6f6;
+                        }
+                        &__heartfull{
+                            position: absolute;
+                            font-size: 25px;
+                            color: $color_primary;
+                            transition: transform 1200ms, opacity 800ms;
+                            opacity: 0;
+                            transform: scale(0.1);
+                            &:hover
+                            {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                        }
                     }
                 }
             }
@@ -56,6 +80,15 @@
                     display: flex;
                     flex-direction: column;
                     &__dishes{
+                        &:nth-child(1){
+                            animation: menu-display 1000ms;
+                        }
+                        &:nth-child(2){
+                            animation: menu-display 1200ms;
+                        }
+                        &:nth-child(3){
+                            animation: menu-display 1400ms;
+                        }
                         display: flex;
                         background-color: white;
                         border-radius: 1rem;
@@ -83,7 +116,7 @@
                             display: flex;
                             flex-direction: column;
                             justify-content: space-around;
-                            padding: 10px;
+                            padding: 25px 10px 10px 10px;
                             &__nb{
                                 font-weight: 600;
                             }
@@ -100,7 +133,15 @@
                                 opacity: 0;
                                 transition: opacity 0.8s ease;
                                 align-self: center;
-                              }
+                            }
+                            &:hover .animation{
+                                background-color:$color_tertiary;
+                                width: 60px;
+                            }
+                            &:hover .fa-check-circle{
+                                opacity: 1;
+                                animation: spin 0.5s;
+                            }
                         }
                     }
                 }
@@ -114,16 +155,202 @@
                     padding: 12px 30px;
                     border-radius: 1.4rem;
                     @include link-shadow;
+                    &:hover{
+                        filter: brightness(125%);
+                        @include link-shadow-hover;
+                    }
                 }
             }
         }
     }
     .menu__content__part__dishescontainer__dishes:hover .animation{
         background-color:$color_tertiary;
-        width: 70px;
+        width: 60px;
     }
     .menu__content__part__dishescontainer__dishes:hover .fa-check-circle{
         opacity: 1;
         animation: spin 0.5s;
       }
 }
+
+/* DESKTOP */
+
+@media screen and (min-width: 1200px){
+    .menu{
+        &__heading{
+            margin-bottom: 80px;
+            &__imagecontainer{
+                border-radius: 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: $color_tertiary;
+                padding:20px;
+                overflow:hidden;
+                &__image{
+                    margin: 0 auto;
+                    object-fit: cover;
+                    height: 40%;
+                    width: 40%;
+                    max-height: 400px;
+                    border-radius: 3rem 3rem 0 0;
+                }
+                &__titlecontainer{
+                    display: flex;
+                    justify-content: space-around;
+                    background-color: #f6f6f6;
+                    border-radius: 0 0 1.5rem 1.5rem;
+                    width: 40%;
+                    margin: 0 auto;
+                    &__title{
+                        font-family: 'Shrikhand', cursive;
+                        font-size: 26px;
+                        margin-left: 15px;
+                    }
+                    &__icons{
+                        align-self: center;
+                        width: 25px; 
+                        height: 25px;
+                        margin-right: 35px;
+                        &__heart{
+                            align-self: center;
+                            font-size: 25px;
+                            background-color: #f6f6f6;
+                        }
+                        &__heartfull{
+                            position: relative;
+                            top: -26px;
+                            font-size: 25px;
+                            color: $color_primary;
+                            transition: transform 1200ms, opacity 800ms;
+                            opacity: 0;
+                            transform: scale(0.5);
+                            &:hover
+                            {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__content{
+            border-radius: 3rem 3rem 0 0;
+            padding: 50px 20px 50px 20px;
+            background-color: #f6f6f6;
+            &__part{
+                &:nth-child(1){
+                    animation: menu-display 1000ms;
+                }
+                &:nth-child(2){
+                    animation: menu-display 1200ms;
+                }
+                &:nth-child(3){
+                    animation: menu-display 1400ms;
+                }
+                margin-top: 25px;
+                padding: 0 15px;
+                &__title{
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+                &__line{ 
+                    border-bottom: 3px #99e2d0 solid;
+                    width: 50px;
+                    margin-bottom: 50px;
+                }
+                &__dishescontainer{
+                    display: flex;
+                    justify-content: space-between;
+                    &__dishes{
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: white;
+                        border-radius: 1rem;
+                        @include link-shadow;
+                        height: 60px;
+                        margin-bottom: 15px;
+                        overflow: hidden;
+                        width: 30%;
+                        &__info{
+                            padding: 10px;
+                            flex-grow: 1;
+                            overflow: hidden;
+                            &__name{
+                                font-weight: 600;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            &__description{
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        &__price{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            padding: 25px 10px 10px 10px;
+                            &__nb{
+                                font-weight: 600;
+                            }
+                        }
+                        &__animation{
+                            display: flex;
+                            justify-content: space-around;
+                            width: 0px;
+                            height: 100%;
+                            transition: width 0.8s;
+                            &__check{
+                                font-size: 22px;
+                                color: white;
+                                opacity: 0;
+                                transition: opacity 0.8s ease;
+                                align-self: center;
+                            }
+                            &:hover .animation{
+                                background-color:$color_tertiary;
+                                width: 60px;
+                            }
+                            &:hover .fa-check-circle{
+                                opacity: 1;
+                                animation: spin 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+            &__linkcontainer{
+                margin: 80px 0 40px 0;
+                text-align: center;
+                &__order{
+                    font-size: 26px;
+                    background-image: linear-gradient($color_secondary, $color_primary);
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 2rem;
+                    @include link-shadow;
+                    &:hover{
+                        filter: brightness(125%);
+                        @include link-shadow-hover;
+                    }
+                }
+            }
+        }
+    }
+    .menu__content__part__dishescontainer__dishes:hover .animation{
+        background-color:$color_tertiary;
+        width: 60px;
+    }
+    .menu__content__part__dishescontainer__dishes:hover .fa-check-circle{
+        opacity: 1;
+        animation: spin 0.5s;
+      }
+    .dishes{
+        width: 22%;
+    }
+}
+
