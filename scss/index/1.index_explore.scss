@@ -3,7 +3,6 @@
     .explore
     {
         background-color: #f6f6f6;
-        border-top: 4px #d5d5d5 solid;
         padding-bottom: 70px;
         &__header
         {
@@ -16,11 +15,15 @@
             {
                 position: relative;
                 font-size: 16.5px;
-                font-weight: 500;
+                color: #353535;
                 &__gpsicon
                 {
+                    font-size: 17px;
                     position: absolute;
                     left: -31px;
+                }
+                &__city{
+                    font-weight: 600;
                 }
             }
         }
@@ -36,6 +39,7 @@
         }
         &__content__complement
         {
+            color: #353535;
             width: 320px;
             max-width: 100%;
             margin: 0 auto;
@@ -50,8 +54,8 @@
             {
                 background-image: linear-gradient($color_secondary, $color_primary);
                 color: white;
-                padding: 12px 20px;
-                border-radius: 1.4rem;
+                padding: 17px 25px;
+                border-radius: 2rem;
                 @include link-shadow;
                 &:hover{
                     filter: brightness(125%);

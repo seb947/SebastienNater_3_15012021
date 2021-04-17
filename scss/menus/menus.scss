@@ -70,6 +70,7 @@
                     font-size: 20px;
                     font-weight: 300;
                     margin: 0;
+                    margin-bottom: 5px;
                 }
                 &__line{ 
                     border-bottom: 3px #99e2d0 solid;
@@ -152,8 +153,8 @@
                 &__order{
                     background-image: linear-gradient($color_secondary, $color_primary);
                     color: white;
-                    padding: 12px 30px;
-                    border-radius: 1.4rem;
+                    padding: 17px 45px;
+                    border-radius: 2rem;
                     @include link-shadow;
                     &:hover{
                         filter: brightness(125%);
@@ -241,13 +242,14 @@
                 margin-top: 25px;
                 padding: 0 15px;
                 &__title{
+                    margin-bottom: 5px;
                     font-size: 20px;
                     font-weight: 300;
                 }
                 &__line{ 
                     border-bottom: 3px #99e2d0 solid;
                     width: 50px;
-                    margin-bottom: 50px;
+                    margin-bottom: 20px;
                 }
                 &__dishescontainer{
                     display: flex;
